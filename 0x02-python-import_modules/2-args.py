@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """This program prints the number and list of its arguments"""
 if __name__ == "__main__":
     import sys
