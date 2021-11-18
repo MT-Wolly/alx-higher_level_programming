@@ -1,4 +1,4 @@
-#!/usr/binm/python3
+#!/usr/bin/python3
 """This script is used to import a calculator from another file without using the __import__ function"""
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
