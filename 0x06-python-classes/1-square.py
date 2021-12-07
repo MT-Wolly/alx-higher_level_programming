@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Defining a Square in a Square class"""
+"""Defining Square in class"""
 
 
 class Square:
-    def __init__(self, size):
-        """Initialized method that stores size of a square
-
+    """This is class is to compute area of a square"""
+    def __init__(self, size=0):
+        """Class is initialized with a field name = size.
         Args:
-            size (float): size of the square
+            size (float): size is a new field and has been initialized to 0.
         """
         self.__size = size
