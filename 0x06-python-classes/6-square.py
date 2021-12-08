@@ -7,8 +7,8 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """Class is initialized with a field named size and position.
         Args:
-            size (int): size is a new field it has been initialized to 0.
-            position (int, int): position is a new field it has been
+            size (int): size is a new field and has been initialized to 0.
+            position (int, int): position is a new field and has been
             initialized
         """
         if not(isinstance(size, int)):
@@ -26,7 +26,7 @@ class Square:
         self.__position = position
 
     def area(self):
-        """This funtion is used to find the area of square.
+        """Function used to find the area of square.
         Returns:
             size squared
         """
@@ -53,12 +53,12 @@ class Square:
 
     @property
     def position(self):
-        """This function is used to return the value that
+        """Function used to return the value that
            was changed by the position setter function.
         Args:
             value (int, int): th tuple to be changed
         Returns:
-               new tuples
+            The new tuples
         """
         return self.__position
 
@@ -74,8 +74,8 @@ class Square:
         self.__position = value
 
     def my_print(self):
-        """This function is used to print a square in form
-           of # using the value given. And tuples as space
+        """Function used to print a square in form
+           of # using the value given. also tuples as space
         """
         if (self.__size == 0):
             print()
