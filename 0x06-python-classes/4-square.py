@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Defining Square in class"""
 
-
 class Square:
     """This is class is to compute the area of a square"""
     def __init__(self, size=0):
@@ -24,8 +23,8 @@ class Square:
 
     @property
     def size(self):
-        """function return to the value that changed by 
-            the size setter function.
+        """function to return the value that was changed by 
+	the size setter function.
         Args:
             value (int): value to be changed
         Returns:
