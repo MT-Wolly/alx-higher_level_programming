@@ -1,0 +1,101 @@
+The integer_validator Module
+============================
+
+Using integer_validator
+-----------------------
+
+In this text file will validate the value given to its
+integer_validator
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+
+Now use it:
+
+Using integers:
+    >>> bg.integer_validator("my_int", 1)
+    >>> bg.integer_validator("width", 89)
+    >>> bg.integer_validator("width", int("5"))
+
+Using 0 and less than 0
+    >>> try:
+    ...     bg.integer_validator("my_int", 0)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [ValueError] my_int must be greater than 0
+
+    >>> try:
+    ...     bg.integer_validator("name", -1)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [ValueError] name must be greater than 0
+
+Using non int
+
+    >>> try:
+    ...     bg.integer_validator("my_int", "0")
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] my_int must be an integer
+
+    >>> try:
+    ...     bg.integer_validator("age", [0])
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] age must be an integer
+
+    >>> try:
+    ...     bg.integer_validator("float", 4.2)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] float must be an integer
+
+    >>> try:
+    ...     bg.integer_validator("int", {1, 2})
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] int must be an integer
+
+    >>> try:
+    ...     bg.integer_validator("name", True)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] name must be an integer
+
+    >>> try:
+    ...     bg.integer_validator("float", None)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] float must be an integer
+
+    >>> try:
+    ...     bg.integer_validator("my_int", (1, 2))
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] my_int must be an integer
+
+    >>> try:
+    ...     bg.integer_validator("float")
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] integer_validator() missing 1 required positional argument: 'value'
+
+    >>> try:
+    ...     bg.integer_validator()
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+This section will check if area is implemented
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+
+Now use it:
+
+    >>> try:
+    ...     print(bg.area())
+    ... except Exception as e:
+    ...      print("[{}] {}".format(e.__class__.__name__, e))
+    [Exception] area() is not implemented
+
