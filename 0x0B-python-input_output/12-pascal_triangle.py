@@ -4,24 +4,26 @@ def pascal_triangle(n):
     Args:
         n: number of lines
     Returns:
-        array: an array with the pascal triangle
+        matrix: a matrix with the pascal triangle
     """
+    if n <= 0:
+        return []
+    else:
+        matrix = []
+        prev = []
 
-    array = []
-    prev = []
+        for i in range(n):
+            res_list = []
+            pasc_1 = -1
+            pasc_2 = 0
+            for j in range(len(prev) + 1):
+                if pasc_1 == -1 or pasc_2 == len(prev):
+                    res_list += [1]
+                else:
+                    res_list += [prev[pasc_1] + prev[pasc_2]]
+                pasc_1 += 1
+                pasc_2 += 1
+            array.append(res_list)
+            prev = res_list[:]
 
-    for i in range(n):
-        res_list = []
-        pasc_1 = -1
-        pasc_2 = 0
-        for j in range(len(prev) + 1):
-            if pasc_1 == -1 or pasc_2 == len(prev):
-                res_list += [1]
-            else:
-                res_list += [prev[pasc_1] + prev[pasc_2]]
-            pasc_1 += 1
-            pasc_2 += 1
-        array.append(res_list)
-        prev = res_list[:]
-
-    return array
+        return matrix
