@@ -1,0 +1,1 @@
+#This folder contains everything to be reviewed about imports, exceptions, classes, private attribute, getter/setter, clas method, static method, inheritance, unittest, Read/write file in python. It also containd information about args and kwargs, serialization and deserialization and JSON files.
