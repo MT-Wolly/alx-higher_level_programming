@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module contains the Rectangle class and inhgerits from the Base class
+This module contains the Rectangle class and inherits from the Base class
 """
 from models.base import base
 
@@ -74,3 +74,23 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
+        self.__y = value
+
+
+    def area(self):
+        """
+        function that returns the area of the rectangle object
+        """
+    
+
+    def display(self):
+        """
+        Function that prints in stdout the rectangle instance 
+        with the character #
+        """
+        rectangle = self.y * "\n"
+        for i in range(self.height):
+            rectangle = rectangle + (" " * self.x)
+            rectangle = rectangle + ("#" * self.width) + "\n"
+        
+        print(rectangle, end='')
