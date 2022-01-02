@@ -37,11 +37,31 @@ class Square(Rectangle):
     
 
     def __str__(self):
-        """ str special method """
+        """  special string representation method """
         str_rectangle = "[Square] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
         str_size = "{}".format(self.size)
 
         return str_rectangle + str_id + str_xy + str_size
+
+
+    def update(self, *args, **kwargs):
+        """ Adding a public method that assigns attributes /         key/value arguments
+        """
+        if args is not None and len(args) is not 0:
+            list_atr = ['id', 'size', 'x', 'y']
+            for i in range(len(args)):
+                if list_atr[i] == 'size':
+                    setattr(self, 'width', args[i])
+                    setattr(self, 'height', args[i])
+                else:
+                    setattr(self, list_atr[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                if key == 'size':
+                    setattr(self, 'width', value)
+                    setattr(self, 'height', value)
+                else:
+                    setattr(self, key, value)
 
