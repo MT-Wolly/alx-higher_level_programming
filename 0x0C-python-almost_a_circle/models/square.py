@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""
-This module contains the square class that inherits from the rectangle class.
+""" This module contains the square class
+that inherits from the rectangle class.
 """
 
 from models.rectangle import Rectangle
@@ -43,8 +43,8 @@ class Square(Rectangle):
         return str_rectangle + str_id + str_xy + str_size
 
     def update(self, *args, **kwargs):
-        """
-        Adding a public method that assigns attributes key/value arguments
+        """ Adding a public method that
+        assigns attributes key/value arguments
         """
         if args is not None and len(args) is not 0:
             list_atr = ['id', 'size', 'x', 'y']
@@ -63,8 +63,7 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
-        """ 
-        Method that returns a dictionary representation of a square
+        """ Method that returns a dictionary representation of a square
         """
         list_atr = ['id', 'size', 'x', 'y']
         dict_res = {}
