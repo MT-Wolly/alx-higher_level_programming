@@ -277,15 +277,15 @@ class TestRectangleMethods(unittest.TestCase):
         rect_1_dictionary = rect_1.to_dictionary()
         rect_2.update(**rect_1_dictionary)
 
-        self.assertEqual(r1.width, r2.width)
-        self.assertEqual(r1.height, r2.height)
-        self.assertEqual(r1.x, r2.x)
-        self.assertEqual(r1.y, r2.y)
-        self.assertEqual(r1.id, r2.id)
+        self.assertEqual(rect_1.width, rect_2.width)
+        self.assertEqual(rect_1.height, rect_2.height)
+        self.assertEqual(rect_1.x, rect_2.x)
+        self.assertEqual(rect_1.y, rect_2.y)
+        self.assertEqual(rect_1.id, rect_2.id)
 
         res = "<class 'dict'>\n"
         with patch('sys.stdout', new=StringIO()) as str_out:
-            print(type(r1_dictionary))
+            print(type(rect_1_dictionary))
             self.assertEqual(str_out.getvalue(), res)
 
     def test_dict_to_json(self):
@@ -313,7 +313,7 @@ class TestRectangleMethods(unittest.TestCase):
         """ Testing create method implemented"""
         dict = {'id': 89}
         rect_1 = Rectangle.create(**dict)
-        self.assertEqual(r1.id, 89)
+        self.assertEqual(rect_1.id, 89)
 
     def test_create_2(self):
         """ Testing create method implemented"""
@@ -342,7 +342,7 @@ class TestRectangleMethods(unittest.TestCase):
     def test_create_5(self):
         """ Test create method implemented"""
         dict = {'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4}
-        rect_1 = Rectangle.create(**dictionary)
+        rect_1 = Rectangle.create(**dict)
         self.assertEqual(rect_1.id, 89)
         self.assertEqual(rect_1.width, 1)
         self.assertEqual(rect_1.height, 2)
@@ -359,7 +359,7 @@ class TestRectangleMethods(unittest.TestCase):
         rect_1 = Rectangle(5, 5)
         rect_2 = Rectangle(8, 2, 5, 5)
 
-        l_input = [r1, r2]
+        l_input = [rect_1, rect_2]
         Rectangle.save_to_file(l_input)
         l_output = Rectangle.load_from_file()
 
