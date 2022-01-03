@@ -26,7 +26,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Width Setter"""
-        if type(value) is not int:
+        if type(value) !=  int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -40,7 +40,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Height setter"""
-        if type(value) is not int:
+        if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -50,12 +50,12 @@ class Rectangle(Base):
     @property
     def x(self):
         """x setter"""
-        return selx.__x
+        return self.__x
 
     @x.setter
     def x(self, value):
         """x setter"""
-        if type(value) is not int:
+        if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -70,7 +70,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """y setter"""
-        if type(value) is not int:
+        if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
@@ -81,6 +81,7 @@ class Rectangle(Base):
         """
         function that returns the area of the rectangle object
         """
+        return self.width * self.height
     
 
     def display(self):
@@ -100,7 +101,7 @@ class Rectangle(Base):
         """
         function to define the string representation 
         """
-        str_rectangle = "[Rectangle]"
+        str_rectangle = "[Rectangle] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
         str_wh = "{}/{}".format(self.width, self.height)
