@@ -5,6 +5,7 @@ This module contains the square class that inherits from the rectangle class.
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """ Defining the square class"""
     
@@ -12,29 +13,25 @@ class Square(Rectangle):
         """ Initializing the variables"""
         super().__init__(size, size, x, y, id)
 
-
     def __str__(self):
         """ Special string representation method """
         str_square = "[Square]"
         str_id = " ({}) ".format(self.id)
         str_xy = "{}/{} -".format(self.x, self.y)
-        str_wh = "{}/{}".format(self.width,self.height)
+        str_wh = "{}/{}".format(self.width, self.height)
 
         return str_square + str_id + str_xy + str_wh
-
 
     @property
     def size(self):
         """ size getter """
         return self.width
 
-
     @size.setter
     def size(self, value):
         """ size setter """
         self.width = value
         self.height = value
-    
 
     def __str__(self):
         """ special string representation method """
@@ -44,7 +41,6 @@ class Square(Rectangle):
         str_size = "{}".format(self.size)
 
         return str_rectangle + str_id + str_xy + str_size
-
 
     def update(self, *args, **kwargs):
         """
@@ -65,6 +61,7 @@ class Square(Rectangle):
                     setattr(self, 'height', value)
                 else:
                     setattr(self, key, value)
+
     def to_dictionary(self):
         """ 
         Method that returns a dictionary representation of a square
