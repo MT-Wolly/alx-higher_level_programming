@@ -310,20 +310,20 @@ class TestRectangleMethods(unittest.TestCase):
             rect_1 = Rectangle(1, -2)
 
     def test_create(self):
-        """ Testing create method implemented"""
+        """ Testing create method implemented """
         dict = {'id': 89}
         rect_1 = Rectangle.create(**dict)
         self.assertEqual(rect_1.id, 89)
 
     def test_create_2(self):
-        """ Testing create method implemented"""
+        """ Testing create method implemented """
         dict = {'id': 89, 'width': 1}
         rect_1 = Rectangle.create(**dict)
         self.assertEqual(rect_1.id, 89)
         self.assertEqual(rect_1.width, 1)
 
     def test_create_3(self):
-        """ Testing create method implemented"""
+        """ Testing create method implemented """
         dict = {'id': 89, 'width': 1, 'height': 2}
         rect_1 = Rectangle.create(**dict)
         self.assertEqual(rect_1.id, 89)
@@ -331,7 +331,7 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertEqual(rect_1.height, 2)
 
     def test_create_4(self):
-        """ Testing create method implemented"""
+        """ Testing create method implemented """
         dict = {'id': 89, 'width': 1, 'height': 2, 'x': 3}
         rect_1 = Rectangle.create(**dict)
         self.assertEqual(rect_1.id, 89)
@@ -340,7 +340,7 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertEqual(rect_1.x, 3)
 
     def test_create_5(self):
-        """ Test create method implemented"""
+        """ Test create method implemented """
         dict = {'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4}
         rect_1 = Rectangle.create(**dict)
         self.assertEqual(rect_1.id, 89)
@@ -350,7 +350,7 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertEqual(rect_1.y, 4)
 
     def test_load_from_file(self):
-        """ Testing the load JSON file method implemented"""
+        """ Testing the load JSON file method implemented """
         load_file = Rectangle.load_from_file()
         self.assertEqual(load_file, [])
 
