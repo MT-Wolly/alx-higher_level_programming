@@ -4,7 +4,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Defining a rectangle class with private instance attributes."""
+    """ Defining a rectangle class with private instance attributes."""
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes instances of the class Rectangle"""
         self.width = width
@@ -74,7 +74,9 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """ Function that prints in stdout the rectangle instance with the character # """
+        """ Function that prints in stdout the
+        rectangle instance with the character #
+        """
         rectangle = self.y * "\n"
         for i in range(self.height):
             rectangle = rectangle + (" " * self.x)
