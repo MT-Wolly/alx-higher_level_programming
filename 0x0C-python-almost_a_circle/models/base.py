@@ -36,7 +36,7 @@ class Base:
             pass
         else:
             for i in range(len(list_objs)):
-                list_dic.append(list_objs[i].to_dictionary())
+                list_dict.append(list_objs[i].to_dictionary())
 
         lists = cls.to_json_string(list_dict)
 
