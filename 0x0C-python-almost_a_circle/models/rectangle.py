@@ -102,7 +102,7 @@ class Rectangle(Base):
         Function to update the public method by assigning 
         arguments and key/value arguments to attributes
         """
-        if args is not None and len(args) is not 0:
+        if args != None and len(args) != 0:
             list_attr = ['id', 'width', 'height', 'x', 'y']
             for i in range(len(args)):
                 setattr(self, list_attr[i], args[i])
