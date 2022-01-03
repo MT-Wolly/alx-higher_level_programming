@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-"""
-This module contains the Rectangle class and inherits from the Base class
-"""
+""" This module contains the Rectangle class and inherits from the Base class """
 from models.base import Base
 
 
 class Rectangle(Base):
-    """
-    Defining a rectangle class with private instance attributes,     each with its own public getter and setter. 
-"""
+    """Defining a rectangle class with private instance attributes."""
     def __init__(self, width, height, x =0, y=0, id=None):
         """Initializes instances of the class Rectangle"""
         self.width = width
@@ -78,17 +74,12 @@ class Rectangle(Base):
 
 
     def area(self):
-        """
-        function that returns the area of the rectangle object
-        """
+        """ function that returns the area of the rectangle object """
         return self.width * self.height
     
 
     def display(self):
-        """
-        Function that prints in stdout the rectangle instance 
-        with the character #
-        """
+        """ Function that prints in stdout the rectangle instance with the character # """
         rectangle = self.y * "\n"
         for i in range(self.height):
             rectangle = rectangle + (" " * self.x)
@@ -98,9 +89,7 @@ class Rectangle(Base):
 
 
     def __str__(self):
-        """
-        function to define the string representation 
-        """
+        """ Function to define the string representation """
         str_rectangle = "[Rectangle] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
@@ -123,9 +112,7 @@ class Rectangle(Base):
 
 
     def to_dictionary(self):
-        """ 
-        Method that returns a dictionary representation of a         rectangle 
-        """
+        """ Method that returns a dictionary representation of a rectangle """
         list_atr = ['id', 'width', 'height', 'x', 'y']
         dict_res = {}
 
