@@ -242,7 +242,7 @@ class TestSquareMethods(unittest.TestCase):
         res = "[Square] (1) 0/0 - 3\n"
 
         with patch('sys.stdout', new=StringIO()) as str_out:
-            print(s1)
+            print(square_1)
             self.assertEqual(str_out.getvalue(), res)
 
         square_1.update(5)
@@ -257,7 +257,7 @@ class TestSquareMethods(unittest.TestCase):
         res = "[Square] (1) 0/0 - 3\n"
 
         with patch('sys.stdout', new=StringIO()) as str_out:
-            print(s1)
+            print(square_1)
             self.assertEqual(str_out.getvalue(), res)
 
         square_1.update(5)
@@ -281,10 +281,10 @@ class TestSquareMethods(unittest.TestCase):
             print(square_1)
             self.assertEqual(str_out.getvalue(), res)
 
-        sqaure_1.update(y=3)
+        square_1.update(y=3)
         res = "[Square] (2) 2/3 - 2\n"
         with patch('sys.stdout', new=StringIO()) as str_out:
-            print(s1)
+            print(square_1)
             self.assertEqual(str_out.getvalue(), res)
 
         square_1.update(id=1, size=10)
