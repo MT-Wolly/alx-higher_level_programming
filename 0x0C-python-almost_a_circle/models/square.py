@@ -18,7 +18,7 @@ class Square(Rectangle):
         str_square = "[Square]"
         str_id = " ({}) ".format(self.id)
         str_xy = "{}/{} -".format(self.x, self.y)
-        self_wh = "{}/{}".format(self.width,self.height)
+        str_wh = "{}/{}".format(self.width,self.height)
 
         return str_square + str_id + str_xy + str_wh
 
@@ -64,9 +64,9 @@ class Square(Rectangle):
                     setattr(self, 'height', value)
                 else:
                     setattr(self, key, value)
-     def to_dictionary(self):
+    def to_dictionary(self):
         """ 
-        Method that returns a dictionary representation of a         square
+        Method that returns a dictionary representation of a square
         """
         list_atr = ['id', 'size', 'x', 'y']
         dict_res = {}
