@@ -2,7 +2,7 @@
 """
 This module contains the Rectangle class and inherits from the Base class
 """
-from models.base import base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -38,7 +38,7 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self.value):
+    def height(self, value):
         """Height setter"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
@@ -113,7 +113,7 @@ class Rectangle(Base):
         arguments and key/value arguments to attributes
         """
         if args is not None and len(args) is not 0:
-            list_atr = ['id', 'width', 'height', 'x', 'y']
+            list_attr = ['id', 'width', 'height', 'x', 'y']
             for i in range(len(args)):
                 setattr(self, list_attr[i], args[i])
         else:
