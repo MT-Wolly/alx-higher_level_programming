@@ -165,7 +165,6 @@ class TestSquareMethods(unittest.TestCase):
             square_1.display()
             self.assertEqual(str_out.getvalue(), res)
 
-
     def test_display_4(self):
         """ Testing display method implemented """
         square_1 = Square(3)
@@ -234,7 +233,6 @@ class TestSquareMethods(unittest.TestCase):
         square_1 = Square(3)
         res = "[Square] (1) 0/0 - 3"
         self.assertEqual(square_1.__str__(), res)
-
 
     def test_update(self):
         """ Test update method implemented """
