@@ -1,5 +1,5 @@
---creates table in database hbtn_0c_0
--- query to create secon_table in database
+-- Creates a table in database hybtn_0c_0
+-- Query to create a table second_table in the database hbtn_0c_0
 CREATE TABLE IF NOT EXISTS second_table (
 id INT,
 name VARCHAR(256),
