@@ -2,7 +2,7 @@
 -- query to list all ther cities from california
 SELECT id, name 
 FROM cities
-WHERE state_id = ( -- Query to get the id of California
+WHERE state_id = (
       SELECT id
       FROM states
       WHERE name = "California");
